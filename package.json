@@ -1,10 +1,23 @@
 {
-  "name": "ImageCropper",
+  "name": "@nichoth/image-cropper",
   "version": "1.0.0",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "0.4.1",
-    "grunt-contrib-uglify": "0.2.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "install": "^0.1.8"
+    "@bicycle-codes/debug": "^0.6.8",
+    "@preact/preset-vite": "^2.8.2",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "auto-changelog": "^2.4.0",
+    "esbuild": "^0.21.2",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "htm": "^3.1.1",
+    "postcss-nesting": "^12.1.4",
+    "preact": "^10.21.0",
+    "tap-spec": "^5.0.0",
+    "tape-run": "^11.0.0",
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
   }
 }

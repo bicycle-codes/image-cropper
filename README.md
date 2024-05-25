@@ -2,6 +2,10 @@
 
 An HTML5 image cropping tool. Features a rectangular crop area. The crop area's aspect ratio can be enforced during dragging. The crop image can either be 1:1 or scaled to fit an area. Also supports multitouch on touch supported devices.
 
+## fork
+
+This is a fork of [AllanBishop/ImageCropper](https://github.com/AllanBishop/ImageCropper).
+
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/AllanBishop/ImageCropper/master/screenshots/screenshot.jpg "Screenshot")
