@@ -398,6 +398,7 @@ const ImageCropper = (function () {
             ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
         }
     }
+
     ImageCropper.prototype.dragCrop = function (x, y, marker) {
         const bounds = this.getBounds()
         const left = x - (bounds.getWidth() / 2)
@@ -426,6 +427,7 @@ const ImageCropper = (function () {
         this.br.moveY(y + (bounds.getHeight() / 2))
         marker.setPosition(x, y)
     }
+
     ImageCropper.prototype.dragCorner = function (x, y, marker) {
         let iX = 0
         let iY = 0

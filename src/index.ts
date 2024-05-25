@@ -529,12 +529,12 @@ export class ImageCropper {
             x = bounds.getWidth() / 2 + this.minXClamp
         }
 
-        if (this.minYClamp && top < this.minYClamp) {
-            y = bounds.getHeight() / 2 + this.minYClamp
+        if (top < this.minYClamp!) {
+            y = bounds.getHeight() / 2 + this.minYClamp!
         }
 
-        if (this.maxYClamp && bottom >= this.maxYClamp) {
-            y = this.maxYClamp - bounds.getHeight() / 2
+        if (bottom >= this.maxYClamp!) {
+            y = this.maxYClamp! - bounds.getHeight() / 2
         }
 
         this.tl.moveX(x - (bounds.getWidth() / 2))
