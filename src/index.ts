@@ -521,24 +521,19 @@ export class ImageCropper {
         const top = y - (bounds.getHeight() / 2)
         const bottom = y + (bounds.getHeight() / 2)
 
-        if (!this.maxXClamp || !this.minXClamp || !this.minYClamp ||
-            !this.maxYClamp) {
-            throw new Error('not clamps')  // for TS
-        }
-
-        if (right >= this.maxXClamp) {
+        if (this.maxXClamp && right >= this.maxXClamp) {
             x = this.maxXClamp - bounds.getWidth() / 2
         }
 
-        if (left <= this.minXClamp) {
+        if (this.minXClamp && left <= this.minXClamp) {
             x = bounds.getWidth() / 2 + this.minXClamp
         }
 
-        if (top < this.minYClamp) {
+        if (this.minYClamp && top < this.minYClamp) {
             y = bounds.getHeight() / 2 + this.minYClamp
         }
 
-        if (bottom >= this.maxYClamp) {
+        if (this.maxYClamp && bottom >= this.maxYClamp) {
             y = this.maxYClamp - bounds.getHeight() / 2
         }
 
