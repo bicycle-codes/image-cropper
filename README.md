@@ -20,11 +20,11 @@ Thanks Allan Bishop for working in the world of open source.
 
  - A modern browser (mobile or desktop) supporting ```<canvas>```
 
-## Installing
+## install
 
-### Download
-
-- [Download ImageCropper](https://github.com/AllanBishop/ImageCropper/archive/master.zip) files from GitHub.
+```sh
+npm i -S @nichoth/image-cropper
+```
 
 ### Add files
 
