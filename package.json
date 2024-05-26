@@ -20,6 +20,26 @@
     "postversion": "git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./min": {
+      "import": "./dist/index.min.js",
+      "require": "./dist/index.mind.cjs"
+    },
+    "./*": {
+      "import": [
+        "./dist/*.js",
+        "./dist/*"
+      ],
+      "require": [
+        "./dist/*.cjs",
+        "./dist/*"
+      ]
+    }
+  },
   "dependencies": {},
   "devDependencies": {
     "@bicycle-codes/debug": "^0.6.8",

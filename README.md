@@ -30,8 +30,7 @@ npm i -S @nichoth/image-cropper
 ### Add files
 
 #### copy
-
-Copy the file to a location that is accessible by your web server
+Copy to a location accessible by your web server
 
 ```sh
 cp ./node_modules/@nichoth/image-cropper/dist/index.min.js ./public/image-cropper.js
@@ -44,11 +43,42 @@ Add the script to your application.
 ```
 
 ### bundle
-
 This is ergonomic to use with a JS bundler such as `vite`. Just import:
 
 ```js
 import { ImageCropper } from '@nichoth/image-cropper'
+```
+
+Or import a minified file:
+
+```js
+import { ImageCropper } from '@nichoth/image-cropper/min'
+```
+
+## example
+Given HTML like this
+
+```html
+<canvas id="the-canvas" width="600" height="400">
+    An alternative text describing what your canvas displays.
+</canvas>
+```
+
+In your JS code,
+
+```js
+import { ImageCropper } from '@nichoth/image-cropper'
+
+const width = 600
+const height = 300
+const cropper = new ImageCropper(
+    canvas,  // <-- HTML canvas element
+    canvas.width / 2 - width / 2,  // <-- left postition of crop area
+    canvas.height / 2 - height / 2,  // <-- top position of crop area
+    width,  // <-- initial width of the crop area
+    height,  // <-- initial height of the crop area
+    true  // <-- Keep the aspect ratio to the given width and height
+)
 ```
 
 ## Public Functions
@@ -95,7 +125,6 @@ Returns the bounds (left, right, top, bottom) of the crop area relative to the o
 
 ## Example code
 
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -115,7 +144,9 @@ Returns the bounds (left, right, top, bottom) of the crop area relative to the o
 		<div>
             Cropped image:
 		</div>
+
 		<div id="preview"></div>
+
 		<script src="ImageCropperTest.js"></script>
 		<script src="ImageCropper.js"></script>
 	</body>
@@ -125,43 +156,57 @@ Returns the bounds (left, right, top, bottom) of the crop area relative to the o
 ImageCropperTest.js
 
 
-```javascript
-var crop;
+```js
+let crop;
 window.onload = function () {
-    var canvas = document.getElementById("imageCanvas");
-    var width = 600;
-    var height = 300;
-    crop = new ImageCropper(canvas, canvas.width / 2 - width / 2, canvas.height / 2 - height / 2, width, height, true);
+    const canvas = document.getElementById("imageCanvas");
+    const width = 600;
+    const height = 300;
+
+    crop = new ImageCropper(
+        canvas,
+        canvas.width / 2 - width / 2,
+        canvas.height / 2 - height / 2,
+        width,
+        height,
+        true
+    );
+
     window.addEventListener('mouseup', preview);
 };
-function preview() {
+
+function preview () {
     if (crop.isImageSet()) {
-        var img = crop.getCroppedImage(400, 200);
+        const img = crop.getCroppedImage(400, 200);
         img.onload = (function () { return previewLoaded(img); });
     }
 }
-function previewLoaded(img) {
+
+function previewLoaded (img) {
     if (img) {
         document.getElementById("preview").appendChild(img);
     }
 }
-function handleFileSelect(evt) {
-    var file = evt.target.files[0];
-    var reader = new FileReader();
-    var img = new Image();
+
+function handleFileSelect (evt) {
+    const file = evt.target.files[0];
+    const reader = new FileReader();
+    const img = new Image();
+
     //listener required for FireFox
     img.addEventListener("load", function () {
         crop.setImage(img);
         preview();
     }, false);
+
     reader.onload = function () {
         img.src = reader.result;
     };
+
     if (file) {
         reader.readAsDataURL(file);
     }
 }
-
 ```
 
 ## License

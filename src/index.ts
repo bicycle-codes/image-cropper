@@ -395,7 +395,7 @@ export class ImageCropper {
     currentlyInteracting:boolean
 
     constructor (
-        canvas,
+        canvas:HTMLCanvasElement,
         x:number = 0,
         y:number = 0,
         width:number = 100,
