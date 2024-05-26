@@ -70,6 +70,8 @@ import { ImageCropper } from '@bicycle-codes/image-cropper'
 
 const width = 600
 const height = 300
+const canvas = document.getElementById('the-canvas')
+
 const cropper = new ImageCropper(
     canvas,  // <-- HTML canvas element
     canvas.width / 2 - width / 2,  // <-- left postition of crop area
