@@ -1,5 +1,4 @@
 # Image Cropper
-
 [![types](https://img.shields.io/npm/types/@nichoth/image-cropper?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
@@ -9,7 +8,7 @@ An HTML5 image cropping tool. Features a rectangular crop area. The crop area's 
 
 ## fork
 
-This is a fork of [AllanBishop/ImageCropper](https://github.com/AllanBishop/ImageCropper).
+This is a fork of [AllanBishop/ImageCropper](https://github.com/AllanBishop/ImageCropper), just packaging and exporting ergonomically for `npm` consumption.
 
 Thanks Allan Bishop for working in the world of open source.
 
@@ -207,6 +206,13 @@ function handleFileSelect (evt) {
         reader.readAsDataURL(file);
     }
 }
+```
+
+## develop
+Start a local server of the [example directory](./example/):
+
+```sh
+npm start
 ```
 
 ## License
