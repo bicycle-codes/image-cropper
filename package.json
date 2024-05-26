@@ -1,5 +1,5 @@
 {
-  "name": "@nichoth/image-cropper",
+  "name": "@biycle-codes/image-cropper",
   "type": "module",
   "version": "0.0.0",
   "scripts": {
@@ -27,7 +27,7 @@
     },
     "./min": {
       "import": "./dist/index.min.js",
-      "require": "./dist/index.mind.cjs"
+      "require": "./dist/index.min.cjs"
     },
     "./*": {
       "import": [
@@ -60,5 +60,28 @@
     "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "vite": "^5.2.11"
-  }
+  },
+  "description": "[![types](https://img.shields.io/npm/types/@nichoth/image-cropper?style=flat-square)](README.md) [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md) [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/) [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)",
+  "main": "dist/index.cjs",
+  "directories": {
+    "doc": "docs",
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bicycle-codes/image-cropper.git"
+  },
+  "keywords": [
+    "image",
+    "crop",
+    "browser"
+  ],
+  "author": "",
+  "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/bicycle-codes/image-cropper/issues"
+  },
+  "homepage": "https://github.com/bicycle-codes/image-cropper#readme"
 }

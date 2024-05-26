@@ -1,5 +1,5 @@
 # Image Cropper
-[![types](https://img.shields.io/npm/types/@nichoth/image-cropper?style=flat-square)](README.md)
+[![types](https://img.shields.io/npm/types/@bicycle-codes/image-cropper?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
@@ -23,7 +23,7 @@ Thanks Allan Bishop for working in the world of open source.
 ## install
 
 ```sh
-npm i -S @nichoth/image-cropper
+npm i -S @bicycle-codes/image-cropper
 ```
 
 ### Add files
@@ -32,7 +32,7 @@ npm i -S @nichoth/image-cropper
 Copy to a location accessible by your web server
 
 ```sh
-cp ./node_modules/@nichoth/image-cropper/dist/index.min.js ./public/image-cropper.js
+cp ./node_modules/@bicycle-codes/image-cropper/dist/index.min.js ./public/image-cropper.js
 ```
 
 Add the script to your application.
@@ -45,13 +45,13 @@ Add the script to your application.
 This is ergonomic to use with a JS bundler such as `vite`. Just import:
 
 ```js
-import { ImageCropper } from '@nichoth/image-cropper'
+import { ImageCropper } from '@bicycle-codes/image-cropper'
 ```
 
 Or import a minified file:
 
 ```js
-import { ImageCropper } from '@nichoth/image-cropper/min'
+import { ImageCropper } from '@bicycle-codes/image-cropper/min'
 ```
 
 ## example
@@ -66,7 +66,7 @@ Given HTML like this
 In your JS code,
 
 ```js
-import { ImageCropper } from '@nichoth/image-cropper'
+import { ImageCropper } from '@bicycle-codes/image-cropper'
 
 const width = 600
 const height = 300
@@ -217,4 +217,4 @@ npm start
 
 ## License
 
-MIT license. See the [LICENSE](https://github.com/nichoth/image-cropper/blob/fork/LICENSE.md) file.
+MIT license. See the [LICENSE](https://github.com/bicycle-codes/image-cropper/blob/fork/LICENSE.md) file.
