@@ -46,10 +46,15 @@ const canvas = await waitFor('#the-canvas') as HTMLCanvasElement
 //     touchRadius:number = 20
 // )
 
+debug('canvas.width', canvas.width)
+debug('canvas.height', canvas.height)
+debug('start position left', (canvas.width / 2) - (width / 2))
+debug('start position top', (canvas.height / 2) - (height / 2))
+
 cropper = new ImageCropper(
     canvas,
-    canvas.width / 2 - width / 2,
-    canvas.height / 2 - height / 2,
+    (canvas.width / 2) - (width / 2),
+    (canvas.height / 2) - (height / 2),
     width,
     height,
     true

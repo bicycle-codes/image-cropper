@@ -2,6 +2,7 @@
   "name": "@bicycle-codes/image-cropper",
   "type": "module",
   "version": "0.0.0",
+  "files": ["./dist/*"],
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
     "build-tests": "esbuild test/index.ts --target=es2020 --bundle --keep-names > test/test-bundle.js",
