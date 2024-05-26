@@ -78,6 +78,9 @@ const cropper = new ImageCropper(
     height,  // <-- initial height of the crop area
     true  // <-- Keep the aspect ratio to the given width and height
 )
+
+const img = document.getElementById('my-image')
+cropper.setImage(img)
 ```
 
 ## Public Functions
