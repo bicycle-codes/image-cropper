@@ -1,5 +1,10 @@
 # Image Cropper
 
+[![types](https://img.shields.io/npm/types/@nichoth/image-cropper?style=flat-square)](README.md)
+[![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
+[![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+
 An HTML5 image cropping tool. Features a rectangular crop area. The crop area's aspect ratio can be enforced during dragging. The crop image can either be 1:1 or scaled to fit an area. Also supports multitouch on touch supported devices.
 
 ## fork
@@ -16,10 +21,6 @@ Thanks Allan Bishop for working in the world of open source.
 
 [Live demo on JSBin](http://jsbin.com/pajiha/45/edit?html,js,output)
 
-## Requirements
-
- - A modern browser (mobile or desktop) supporting ```<canvas>```
-
 ## install
 
 ```sh
@@ -28,16 +29,31 @@ npm i -S @nichoth/image-cropper
 
 ### Add files
 
+#### copy
+
+Copy the file to a location that is accessible by your web server
+
+```sh
+cp ./node_modules/@nichoth/image-cropper/dist/index.min.js ./public/image-cropper.js
+```
+
 Add the script to your application.
 
 ```html
-<script src="ImageCropper.min.js"></script>
+<script src="/image-cropper.js"></script>
+```
 
+### bundle
+
+This is ergonomic to use with a JS bundler such as `vite`. Just import:
+
+```js
+import { ImageCropper } from '@nichoth/image-cropper'
 ```
 
 ## Public Functions
 
-### ImageCropper(canvas, x, y, width, height, keepAspect, touchRadius):void
+### `ImageCropper(canvas, x, y, width, height, keepAspect, touchRadius):void`
 
 Constructor function that initializes the image cropper.
 
@@ -52,7 +68,7 @@ Constructor function that initializes the image cropper.
 | touchRadius  | *Optional:* The radius for detecting touches/clicks on the corner drag markers and the centre drag marker. |
 
 
-### getCroppedImage(fillWidth, fillHeight):Image
+### `getCroppedImage(fillWidth, fillHeight):Image`
 
 Returns an image that is cropped from the source image based on the crop area. If no fillWidth and fillHeight is set the image will be a 1:1 crop. If fillWidth and fillHeight are set the cropped image will scale to fit. It is recommended to ensure the fillWidth and fillHeight are set to the same aspect ratio as the crop area to prevent distortion.
 
@@ -61,7 +77,7 @@ Returns an image that is cropped from the source image based on the crop area. I
 | fillWidth| *Optional:* The fill width that the cropped area will map to.|
 | fillHeight| *Optional:* The fill height that the cropped area will map to. |
 
-### setImage(image)
+### `setImage(image)`
 
 Set the image for the image cropper.
 
@@ -69,11 +85,11 @@ Set the image for the image cropper.
 | ------ | ----------- |
 | image| The image that will be used for cropping.
 
-### isImageSet():boolean
+### `isImageSet():boolean`
 
 Checks to see if an image has been set.
 
-### getCropBounds():Bounds
+### `getCropBounds():Bounds`
 
 Returns the bounds (left, right, top, bottom) of the crop area relative to the original source image.
 
@@ -95,8 +111,9 @@ Returns the bounds (left, right, top, bottom) of the crop area relative to the o
 			<canvas id="imageCanvas" width="600" height="400" style="border:0px solid #000000;">
 			</canvas>
 		</div>
+
 		<div>
-		Cropped image:
+            Cropped image:
 		</div>
 		<div id="preview"></div>
 		<script src="ImageCropperTest.js"></script>
@@ -147,7 +164,6 @@ function handleFileSelect(evt) {
 
 ```
 
-
 ## License
 
-See the [LICENSE](https://github.com/AllanBishop/ImageCropper/blob/master/LICENSE.md) file.
+MIT license. See the [LICENSE](https://github.com/nichoth/image-cropper/blob/fork/LICENSE.md) file.

@@ -22,7 +22,8 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  **/
-/// <reference path="ImageCropper.ts"/>
+///// <reference path="ImageCropper.ts"/>
+
 var crop;
 window.onload = function () {
     var canvas = document.getElementById("imageCanvas");
@@ -43,6 +44,7 @@ function previewLoaded(img) {
         document.getElementById("preview").appendChild(img);
     }
 }
+
 function handleFileSelect(evt) {
     var file = evt.target.files[0];
     var reader = new FileReader();
@@ -58,5 +60,6 @@ function handleFileSelect(evt) {
         reader.readAsDataURL(file);
     }
 }
-document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
-//# sourceMappingURL=ImageCropperTest.js.map
+
+document.getElementById('fileInput').addEventListener('change',
+    handleFileSelect, false);
