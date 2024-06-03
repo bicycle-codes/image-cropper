@@ -10,7 +10,7 @@ An HTML5 image cropping tool. Features a rectangular crop area. The crop area's 
 
 This is a fork of [AllanBishop/ImageCropper](https://github.com/AllanBishop/ImageCropper), just packaging and exporting ergonomically for `npm` consumption.
 
-Thanks Allan Bishop for working in the world of open source.
+Thanks [@AllanBishop](https://github.com/AllanBishop) for working in the world of open source.
 
 ## Screenshot
 
